@@ -25,11 +25,11 @@ public class HtmlGenerator implements AutoCloseable {
 
         writer.println(head);
 
-        for (Movie Movie : Movies) {
-            String title = Movie.getTitle();
-            String urlImage = Movie.getUrlImage();
-            Double rating = Movie.getRating();
-            Integer year = Movie.getYear();
+        for (Movie movie : Movies) {
+            String title = movie.getTitle();
+            String urlImage = movie.getUrlImage();
+            Double rating = movie.getRating();
+            Integer year = movie.getYear();
 
             writer.println(String.format(divTemplate, title, urlImage, title, rating, year));
         }
